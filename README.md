@@ -95,10 +95,12 @@ docker compose up -d
 ```bash
 mkdir -p /boot/config/plugins/dockerMan/templates-user
 wget -O /boot/config/plugins/dockerMan/templates-user/my-get-icon.xml \
-  https://raw.githubusercontent.com/Newterry/get-icon/main/unraid/my-get-icon.xml
+  https://raw.githubusercontent.com/Newterry/get-icon/main/templates/get-icon.xml
 ```
 
 然后进入 **Docker → Add Container → User templates → get-icon**，确认端口 `3080` 后点击 **Apply**。模板直接拉取 Docker Hub 镜像，不需要 Compose Manager 或数据目录。
+
+仓库同时符合 Unraid Community Applications 的正式提交结构。目录审核通过后，也可以直接在 **Apps** 页面搜索 `Get Icon` 安装。
 
 完整说明见 [Unraid 安装文档](unraid/README.md)。
 
@@ -339,6 +341,9 @@ get-icon/
 │   │   └── routes.ts
 │   └── test/
 ├── unraid/
+├── templates/
+│   └── get-icon.xml      # Community Applications / 用户模板
+├── ca_profile.xml        # Community Applications 仓库资料
 ├── Dockerfile
 ├── docker-compose.yml
 └── README.md

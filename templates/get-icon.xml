@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Get Icon</Name>
+  <Repository>newterry/get-icon:latest</Repository>
+  <Registry>https://hub.docker.com/r/newterry/get-icon</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Icon>https://raw.githubusercontent.com/Newterry/get-icon/main/frontend/public/app-icon.png</Icon>
+  <WebUI>http://[IP]:[PORT:3080]/</WebUI>
+  <Overview>Extract, inspect, convert and download the highest-quality icon from any public website. Get Icon analyzes Apple Touch Icons, Web App Manifests, regular favicons and common paths, then verifies real formats and dimensions. Includes batch extraction, multilingual UI, image conversion, caching, rate limiting and SSRF protection.</Overview>
+  <Support>https://github.com/Newterry/get-icon/issues</Support>
+  <Project>https://github.com/Newterry/get-icon</Project>
+  <TemplateURL>https://raw.githubusercontent.com/Newterry/get-icon/main/templates/get-icon.xml</TemplateURL>
+  <ReadMe>https://raw.githubusercontent.com/Newterry/get-icon/main/README.md</ReadMe>
+  <Category>Tools:Utilities</Category>
+  <ExtraSearchTerms>favicon icon logo website manifest n8n agent extractor</ExtraSearchTerms>
+  <Requires>Outbound HTTP and HTTPS access to the public websites you want to analyze.</Requires>
+  <Changes>2026-09-15: Initial Community Applications release.</Changes>
+  <Date>2026-09-15</Date>
+  <MinVer>6.12.0</MinVer>
+  <License>MIT</License>
+  <Screenshot>https://raw.githubusercontent.com/Newterry/get-icon/main/docs/images/get-icon-batch.png</Screenshot>
+  <ExtraParams>--init</ExtraParams>
+  <Config Name="WebUI Port" Target="3080" Default="3080" Mode="tcp" Description="Host port for the Get Icon web interface and REST API." Type="Port" Display="always" Required="true" Mask="false">3080</Config>
+  <Config Name="Timezone" Target="TZ" Default="Asia/Shanghai" Mode="" Description="Container timezone." Type="Variable" Display="always" Required="true" Mask="false">Asia/Shanghai</Config>
+  <Config Name="Allow DNS fake-IP" Target="ALLOW_DNS_FAKE_IP" Default="false" Mode="" Description="Keep false on normal networks. Enable only for a trusted Clash 198.18.0.0/15 fake-IP DNS environment." Type="Variable" Display="advanced" Required="true" Mask="false">false</Config>
+  <Config Name="Max outbound requests" Target="MAX_OUTBOUND_REQUESTS" Default="16" Mode="" Description="Maximum concurrent outbound website and icon requests shared by all users." Type="Variable" Display="advanced" Required="true" Mask="false">16</Config>
+  <Config Name="API rate limit" Target="RATE_LIMIT_PER_MINUTE" Default="180" Mode="" Description="Maximum API requests per client IP per minute." Type="Variable" Display="advanced" Required="true" Mask="false">180</Config>
+  <Config Name="Trusted proxy hops" Target="TRUST_PROXY_HOPS" Default="1" Mode="" Description="Trusted reverse proxy hop count. Keep 1 for a single Caddy or Nginx proxy." Type="Variable" Display="advanced" Required="true" Mask="false">1</Config>
+</Container>

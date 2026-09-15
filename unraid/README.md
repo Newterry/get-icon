@@ -9,7 +9,7 @@
 ```bash
 mkdir -p /boot/config/plugins/dockerMan/templates-user
 wget -O /boot/config/plugins/dockerMan/templates-user/my-get-icon.xml \
-  https://raw.githubusercontent.com/Newterry/get-icon/main/unraid/my-get-icon.xml
+  https://raw.githubusercontent.com/Newterry/get-icon/main/templates/get-icon.xml
 ```
 
 随后进入 **Docker → Add Container**，在 **User templates** 中选择 `get-icon`，确认 WebUI 端口为 `3080`，点击 **Apply**。
@@ -28,3 +28,7 @@ wget -O /boot/config/plugins/dockerMan/templates-user/my-get-icon.xml \
 Web 地址为 `http://UNRAID-IP:3080`。
 
 应用不保存使用历史，语言和主题偏好只保存在各自浏览器中。后端缓存仅在容器内存中保留一小时。
+
+## Community Applications
+
+本仓库也已按照 Unraid Community Applications 的正式仓库规范提供 `ca_profile.xml` 和 `templates/get-icon.xml`。正式目录审核通过后，可以直接在 Unraid 的 **Apps** 页面搜索 `Get Icon` 安装。

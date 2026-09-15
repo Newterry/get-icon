@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommunityApplications>
+  <Profile>Get Icon provides an easy-to-install website icon extraction service for Unraid. It discovers Apple Touch Icons, Web App Manifest icons, regular favicons and common icon paths, verifies real image formats and dimensions, and exposes a multilingual web interface plus REST APIs. Support and source code are available on GitHub.</Profile>
+  <Icon>https://raw.githubusercontent.com/Newterry/get-icon/main/frontend/public/app-icon.png</Icon>
+  <WebPage>https://github.com/Newterry/get-icon</WebPage>
+  <Photo>https://raw.githubusercontent.com/Newterry/get-icon/main/docs/images/get-icon-batch.png</Photo>
+</CommunityApplications>
