@@ -1,0 +1,13 @@
+node_modules
+**/node_modules
+**/dist
+.git
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+*.tsbuildinfo
+output
+unraid/*.tar.gz
+.wrangler

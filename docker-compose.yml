@@ -1,0 +1,16 @@
+services:
+  get-icon:
+    image: newterry/get-icon:latest
+    container_name: get-icon
+    pull_policy: always
+    restart: unless-stopped
+    init: true
+    ports:
+      - "${PORT:-3080}:${PORT:-3080}"
+    environment:
+      PORT: ${PORT:-3080}
+      TZ: ${TZ:-Asia/Shanghai}
+      ALLOW_DNS_FAKE_IP: ${ALLOW_DNS_FAKE_IP:-false}
+      MAX_OUTBOUND_REQUESTS: ${MAX_OUTBOUND_REQUESTS:-16}
+      RATE_LIMIT_PER_MINUTE: ${RATE_LIMIT_PER_MINUTE:-180}
+      TRUST_PROXY_HOPS: ${TRUST_PROXY_HOPS:-1}

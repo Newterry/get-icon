@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>get-icon</Name>
+  <Repository>newterry/get-icon:latest</Repository>
+  <Registry>https://hub.docker.com/r/newterry/get-icon</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://github.com/Newterry/get-icon</Project>
+  <Support>https://github.com/Newterry/get-icon/issues</Support>
+  <WebUI>http://[IP]:[PORT:3080]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/Newterry/get-icon/main/frontend/public/app-icon.png</Icon>
+  <Overview>Get Icon 自动分析网站并提取最高质量的 Favicon、Apple Touch Icon 或 Manifest Icon，支持批量提取、多语言以及 PNG、WebP、JPEG、AVIF 格式转换。</Overview>
+  <Description>轻量、无数据库、支持多用户的网站图标提取服务，包含 SSRF 防护、请求合并、一小时内存缓存、图标代理、格式转换与 Agent API。</Description>
+  <Category>Productivity: Tools:</Category>
+  <Date>2026-09-15</Date>
+  <ExtraParams>--init</ExtraParams>
+  <Config Name="WebUI Port" Target="3080" Default="3080" Mode="tcp" Description="网站和 API 的 HTTP 端口。" Type="Port" Display="always" Required="true" Mask="false">3080</Config>
+  <Config Name="Timezone" Target="TZ" Default="Asia/Shanghai" Mode="" Description="容器时区。" Type="Variable" Display="always" Required="true" Mask="false">Asia/Shanghai</Config>
+  <Config Name="Listen Port" Target="PORT" Default="3080" Mode="" Description="Express 在容器内监听的端口；通常保持 3080。" Type="Variable" Display="advanced" Required="true" Mask="false">3080</Config>
+  <Config Name="Allow DNS fake-IP" Target="ALLOW_DNS_FAKE_IP" Default="false|true" Mode="" Description="普通网络保持 false。仅当 Unraid 使用 Clash 198.18.0.0/15 fake-IP DNS 时设为 true。" Type="Variable" Display="advanced" Required="true" Mask="false">false</Config>
+  <Config Name="Max outbound requests" Target="MAX_OUTBOUND_REQUESTS" Default="16" Mode="" Description="所有用户合计的外部网页与图标请求并发上限。" Type="Variable" Display="advanced" Required="true" Mask="false">16</Config>
+  <Config Name="API rate limit" Target="RATE_LIMIT_PER_MINUTE" Default="180" Mode="" Description="每个客户端 IP 每分钟允许的 API 请求数。" Type="Variable" Display="advanced" Required="true" Mask="false">180</Config>
+  <Config Name="Trusted proxy hops" Target="TRUST_PROXY_HOPS" Default="1" Mode="" Description="反向代理跳数；直接访问和单层 Caddy/Nginx 保持 1。" Type="Variable" Display="advanced" Required="true" Mask="false">1</Config>
+</Container>

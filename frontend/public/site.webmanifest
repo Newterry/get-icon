@@ -1,0 +1,12 @@
+{
+  "name": "Get Icon",
+  "short_name": "Get Icon",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#0d63f8",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/app-icon.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
